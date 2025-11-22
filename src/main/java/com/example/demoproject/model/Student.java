@@ -8,10 +8,20 @@ public class Student {
     private String email;
     private String group;
 
+    public Student(){};
+
     public Student(int id, String name, String surname){
         this.id = id;
         this.name = name;
         this.surname = surname;
+    }
+
+    public Student(int id, String name, String surname, String email, String group) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.group = group;
     }
 
     public int getId() {
@@ -56,12 +66,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", email='" + email + '\'' +
-                ", group='" + group + '\'' +
-                '}';
+        return id + "," + name + "," + surname +","+email+","+group;
     }
 }
